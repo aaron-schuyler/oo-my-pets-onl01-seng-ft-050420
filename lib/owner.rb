@@ -27,6 +27,6 @@ class Owner
   end
   def buy_cat(name)
     Cat.all.find{|cat| cat.name == name}.owner = self
-    binding.pry
+    
   end 
 end
