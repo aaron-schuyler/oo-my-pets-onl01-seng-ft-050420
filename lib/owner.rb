@@ -24,4 +24,7 @@ class Owner
   def dogs
     Dog.all.select{|dog| dog.owner == self}
   end
+  def buy_cat(name)
+    Cat.all.find{|cat| cat.name == name}.owner = self
+  end 
 end
