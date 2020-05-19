@@ -39,9 +39,10 @@ describe "Associations" do
       it 'can buy a cat that is an instance of the Cat class' do
         expect(@owner.cats.count).to eq(0)
 
-        @owner.buy_cat("Crookshanks")
+        
         @owner.buy_cat("Whiskers")
         @owner.buy_cat("Garfield")
+        @owner.buy_cat("Crookshanks")
       binding.pry
         @owner.cats.each do |cat|
           expect(cat).to be_a(Cat)
