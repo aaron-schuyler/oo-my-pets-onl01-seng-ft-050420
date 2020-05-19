@@ -18,4 +18,6 @@ class Owner
   def self.reset_all
     @@all =[]
   end
+  def cats
+    Cats.all.select{|cat| cat.owner == self}
 end
